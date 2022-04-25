@@ -49,6 +49,7 @@ view: order_items {
   dimension: sale_price {
     type: number
     value_format: "$0.00"
+    hidden: yes
     sql: ${TABLE}.sale_price ;;
   }
 
