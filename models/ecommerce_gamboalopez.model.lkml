@@ -8,8 +8,10 @@ include: "/views/**/*.view"
 # use the Quick Help panel on the right to see documentation.
 
 datagroup: ecommerce_gamboalopez_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "24 hours"
+  sql_trigger: SELECT FLOOR((UNIX_TIMESTAMP(NOW()) - 60*60*6)/(60*60*24));; #Every day at 6:00AM
+  label: "6AM Scheduled Email"
+  description: "Sends an email every 24 hours at 6AM"
 }
 
 persist_with: ecommerce_gamboalopez_default_datagroup
