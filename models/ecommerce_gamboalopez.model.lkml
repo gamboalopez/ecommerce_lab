@@ -11,7 +11,7 @@ datagroup: ecommerce_gamboalopez_default_datagroup {
   max_cache_age: "24 hours"
   sql_trigger: SELECT FLOOR((UNIX_TIMESTAMP(NOW()) - 60*60*6)/(60*60*24));; #Every day at 6:00AM
   label: "6AM Scheduled Email"
-  description: "Sends an email every 24 hours at 6AM"
+  description: "Sends an email every 24 hours at 6 AM"
 }
 
 persist_with: ecommerce_gamboalopez_default_datagroup
